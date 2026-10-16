@@ -74,17 +74,18 @@
     <span class="tag">LEGISLATURA 2025–2028</span>
     <h2>Vereadores</h2>
     <p class="intro">Parlamentares da Câmara Municipal.</p>
-    <div class="vereadores">
-      <article><div class="avatar">AR</div><h3>Antonio Ribeiro</h3><p>PT</p></article>
-      <article><div class="avatar">EF</div><h3>Edivaldo Fontes</h3><p>PT</p></article>
-      <article><div class="avatar">FM</div><h3>Francisco Márcio</h3><p>MDB</p></article>
-      <article><div class="avatar">HL</div><h3>Henrique Leal</h3><p>PT</p></article>
-      <article><div class="avatar">JL</div><h3>Jofran Lopes</h3><p>PT</p></article>
-      <article><div class="avatar">PC</div><h3>Paulo Cortez</h3><p>MDB</p></article>
-      <article><div class="avatar">PB</div><h3>Peterson Barbosa</h3><p>PSD</p></article>
-      <article><div class="avatar">JO</div><h3>João Olimpio</h3><p>MDB</p></article>
-      <article><div class="avatar">TL</div><h3>Tiago Leal</h3><p>PSD</p></article>
+    <div class="busca-vereadores">
+      <label for="buscarVereador">Pesquisar vereador por nome ou partido</label>
+      <input
+          type="search"
+          id="buscarVereador"
+          placeholder="Digite um nome ou partido..."
+      >
     </div>
+    <div class="vereadores" id="listaVereadores">
+    </div>
+    <p id="resultadoBusca" aria-live="polite"></p>
+
   </div>
 </section>
 
@@ -96,11 +97,9 @@
       <table>
         <caption>Agenda de sessões</caption>
         <thead><tr><th scope="col">Data</th><th scope="col">Horário</th><th scope="col">Tipo</th><th scope="col">Local</th></tr></thead>
-        <tbody>
-          <tr><td>21/09/2026</td><td>19:30h</td><td>Ordinária</td><td>Edifício Vereador Luis Ramos</td></tr>
-          <tr><td>28/09/2026</td><td>19:30h</td><td>Ordinária</td><td>Edifício Vereador Luis Ramos</td></tr>
-          <tr><td>05/10/2026</td><td>19:30h</td><td>Ordinária</td><td>Edifício Vereador Luis Ramos</td></tr>
+        <tbody id="listaSessoes">
         </tbody>
+
       </table>
     </div>
   </div>
@@ -139,7 +138,9 @@
       <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
       <div><label for="assunto">Assunto</label><select id="assunto" name="assunto"><option>Dúvida</option><option>Sugestão</option><option>Solicitação de informação</option></select></div>
       <div><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" rows="5" required></textarea></div>
-      <button class="btn principal" type="submit">Enviar mensagem</button>
+      <button class="btn principal" type="submit">Enviar mensagem</button>   
+      <p id="retornoFormulario" aria-live="polite"></p>
+
     </form>
   </div>
 </section>
@@ -153,5 +154,12 @@
   </div>
   <p class="copyright">© 2026 Câmara Municipal de Ipiranga do Piauí — Trabalho acadêmico.</p>
 </footer>
+
+<button id="voltarTopo" class="voltar-topo" type="button"
+        aria-label="Voltar ao topo">
+    ↑
+</button>
+
+<script src="script.js" defer></script>
 </body>
 </html>
