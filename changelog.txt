@@ -1,1 +1,55 @@
+Changelog
 
+Todas as alterações relevantes deste projeto serão documentadas neste arquivo.
+
+O formato segue uma organização por versões, destacando as funcionalidades adicionadas e as melhorias realizadas durante o desenvolvimento.
+
+[1.1.0] - 2026-10-16
+
+Adicionado
+
+- Implementação de JavaScript para adicionar dinamicidade e interatividade à página.
+- Criação dinâmica dos cartões de vereadores utilizando arrays, objetos e manipulação do DOM.
+- Campo de pesquisa de vereadores por nome ou partido.
+- Geração dinâmica das linhas da tabela de sessões legislativas.
+- Destaque visual no menu de navegação conforme a seção acessada.
+- Botão para retornar ao topo da página durante a rolagem.
+- Validação dos campos obrigatórios do formulário de contato.
+- Mensagens de retorno para informar o resultado da validação do formulário.
+
+Modificado
+
+- Atualização do HTML para integrar os elementos necessários às funcionalidades JavaScript.
+- Atualização do CSS para estilizar o campo de pesquisa, o menu ativo, as mensagens do formulário e o botão de retorno ao topo.
+- Inclusão do arquivo "script.js" na estrutura do projeto.
+- Atualização da documentação do projeto para incluir as novas funcionalidades e tecnologias utilizadas.
+
+Observações
+
+- O formulário de contato possui funcionamento demonstrativo e não encaminha mensagens para um servidor.
+- As informações dos vereadores e das sessões são armazenadas diretamente no código JavaScript.
+
+[1.0.0] - Versão inicial
+
+Adicionado
+
+- Criação da estrutura inicial do portal institucional com HTML5.
+- Estilização da página utilizando CSS3.
+- Cabeçalho com identificação da Câmara Municipal e menu de navegação.
+- Seção inicial com apresentação do portal e acessos rápidos.
+- Seção institucional com cartões informativos.
+- Seção de vereadores com nomes, partidos e iniciais.
+- Tabela com informações sobre as sessões legislativas.
+- Área de projetos, leis e documentos.
+- Seção de transparência com links de acesso.
+- Formulário de contato.
+- Rodapé com identificação institucional e links rápidos.
+- Recursos básicos de acessibilidade.
+- Layout responsivo para tablets e celulares.
+- Documentação inicial do projeto no arquivo "README.md".
+
+---
+
+Projeto acadêmico: Câmara Municipal de Ipiranga do Piauí
+Disciplina: Programação para a Web 1
+Ano: 2026
