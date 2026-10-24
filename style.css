@@ -604,3 +604,67 @@ textarea {
     outline: 3px solid #f2b84b;
     outline-offset: 3px;
 }
+
+.armazenamento {
+    background: #fff;
+}
+
+.armazenamento-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.armazenamento-cards article {
+    background: #f4f7f8;
+    border: 1px solid #d5dfe4;
+    border-radius: 7px;
+    padding: 24px;
+}
+
+.armazenamento-cards h3 {
+    color: #0e3a59;
+    margin-bottom: 10px;
+}
+
+.armazenamento-cards article span {
+    display: block;
+    margin-top: 15px;
+    color: #174f78;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.botoes-cookies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.botoes-cookies .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+#limparArmazenamento {
+    margin-top: 5px;
+}
+
+#retornoArmazenamento {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 850px) {
+    .armazenamento-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .armazenamento-cards {
+        grid-template-columns: 1fr;
+    }
+}

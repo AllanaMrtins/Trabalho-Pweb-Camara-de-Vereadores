@@ -31,6 +31,7 @@
       <a href="#projetos">Projetos e Leis</a>
       <a href="#transparencia">Transparência</a>
       <a href="#contato">Contato</a>
+      <a href="#armazenamento">Armazenamento</a>
     </div>
   </nav>
 </header>
@@ -129,6 +130,51 @@
     </div>
   </div>
 </section>
+
+<section id="armazenamento" class="secao armazenamento">
+  <div class="container">
+    <span class="tag">TECNOLOGIA E PRIVACIDADE</span>
+    <h2>Armazenamento de dados no navegador</h2>
+    <p class="intro">
+      Este portal utiliza recursos do navegador para guardar preferências
+      e facilitar a navegação. Você pode gerenciar sua preferência de cookies
+      e consultar o funcionamento desses recursos.
+    </p>
+
+    <div class="armazenamento-cards">
+      <article>
+        <h3>LocalStorage</h3>
+        <p>Guarda temporariamente os dados de contato preenchidos,
+          permitindo recuperá-los em uma próxima visita.</p>
+
+        <span id="statusLocalStorage" aria-live="polite">Verificando armazenamento...</span>
+      </article>
+
+      <article>
+        <h3>SessionStorage</h3>
+        <p> Mantém o termo da pesquisa de vereadores durante a sessão
+          da aba do navegador.</p>
+
+        <span id="statusSessionStorage" aria-live="polite">Verificando armazenamento...</span>
+      </article>
+
+      <article>
+        <h3>Cookies HTTP</h3>
+        <p>Guardam sua preferência sobre o uso de cookies neste portal.</p>
+        <span id="statusCookies" aria-live="polite">Verificando preferência...</span>
+
+        <div class="botoes-cookies">
+          <button class="btn principal" id="aceitarCookies" type="button"> Aceitar</button>
+          <button class="btn claro" id="recusarCookies" type="button">Recusar</button>
+        </div>
+      </article>
+    </div>
+
+    <button class="btn claro" id="limparArmazenamento" type="button">Limpar dados salvos</button>
+    <p id="retornoArmazenamento" aria-live="polite"></p>
+  </div>
+</section>
+</escape>
 
 <section id="contato" class="secao cinza">
   <div class="container contato">

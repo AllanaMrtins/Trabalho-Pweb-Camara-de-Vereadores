@@ -4,6 +4,36 @@ Todas as alterações relevantes deste projeto serão documentadas neste arquivo
 
 O formato segue uma organização por versões, destacando as funcionalidades adicionadas e as melhorias realizadas durante o desenvolvimento.
 
+[1.2.0] - 2026-10-23
+
+Adicionado
+
+- Implementação de armazenamento de dados no navegador utilizando `localStorage`, `sessionStorage` e cookies HTTP.
+- Utilização do `localStorage` para salvar e recuperar o nome e o e-mail preenchidos no formulário de contato.
+- Utilização do `sessionStorage` para manter o termo de pesquisa de vereadores durante a sessão da aba do navegador.
+- Implementação de cookies para registrar a preferência do usuário em relação ao uso de cookies, com validade de 30 dias.
+- Criação da seção "Armazenamento de dados no navegador", com cartões informativos sobre as três tecnologias utilizadas.
+- Inclusão dos botões "Aceitar" e "Recusar" para registrar a preferência de cookies.
+- Criação do botão "Limpar dados salvos", permitindo remover os dados de contato, a pesquisa armazenada e a preferência registrada no cookie.
+- Exibição de mensagens para informar o estado dos dados armazenados e as ações realizadas pelo usuário.
+
+Modificado
+
+- Atualização do HTML para incluir a seção de armazenamento de dados e os elementos necessários à interação com o usuário.
+- Atualização do CSS para estilizar os cartões de armazenamento, os botões de preferência de cookies e as mensagens de retorno.
+- Atualização do arquivo `script.js` para implementar as operações de armazenamento, recuperação e remoção de dados.
+- Ajuste dos eventos dos botões de cookies para registrar e exibir a preferência selecionada pelo usuário.
+- Atualização do menu de navegação para incluir o acesso à seção de armazenamento de dados.
+
+Observações
+
+- O armazenamento realizado pelo `localStorage` persiste após o fechamento do navegador, até que os dados sejam removidos.
+- O `sessionStorage` mantém os dados durante a sessão da aba do navegador.
+- Os cookies utilizados registram a preferência do usuário por meio de JavaScript e possuem validade de 30 dias.
+- O uso de cookies neste projeto tem finalidade demonstrativa e não envolve o envio de dados para um servidor.
+- O formulário de contato possui funcionamento demonstrativo e não encaminha mensagens para um servidor.
+- As informações dos vereadores e das sessões são armazenadas diretamente no código JavaScript.
+
 [1.1.0] - 2026-10-16
 
 Adicionado
@@ -21,7 +51,7 @@ Modificado
 
 - Atualização do HTML para integrar os elementos necessários às funcionalidades JavaScript.
 - Atualização do CSS para estilizar o campo de pesquisa, o menu ativo, as mensagens do formulário e o botão de retorno ao topo.
-- Inclusão do arquivo "script.js" na estrutura do projeto.
+- Inclusão do arquivo `script.js` na estrutura do projeto.
 - Atualização da documentação do projeto para incluir as novas funcionalidades e tecnologias utilizadas.
 
 Observações
@@ -46,10 +76,10 @@ Adicionado
 - Rodapé com identificação institucional e links rápidos.
 - Recursos básicos de acessibilidade.
 - Layout responsivo para tablets e celulares.
-- Documentação inicial do projeto no arquivo "README.md".
+- Documentação inicial do projeto no arquivo `README.md`.
 
 ---
 
-Projeto acadêmico: Câmara Municipal de Ipiranga do Piauí
-Disciplina: Programação para a Web 1
+Projeto acadêmico: Câmara Municipal de Ipiranga do Piauí  
+Disciplina: Programação para a Web 1  
 Ano: 2026
