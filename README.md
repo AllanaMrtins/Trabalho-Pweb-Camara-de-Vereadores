@@ -34,7 +34,10 @@ A interface foi planejada para:
 - Utilizar recursos de acessibilidade;
 - Adaptar a interface para diferentes tamanhos de tela;
 - Aplicar conceitos fundamentais de JavaScript, incluindo funções, objetos, arrays, eventos e manipulação do DOM.
-
+- Utilizar o localStorage para salvar e recuperar dados de contato;
+- Utilizar o sessionStorage para manter a pesquisa de vereadores durante a sessão da aba;
+- Utilizar cookies para registrar a preferência do usuário sobre o uso de cookies;
+- Permitir a consulta do estado dos dados armazenados e a remoção desses dados pelo usuário.
 ---
 
 ## 💻 Tecnologias utilizadas
@@ -110,6 +113,22 @@ Foi adicionado um botão que aparece quando o usuário rola a página para baixo
 O formulário verifica o preenchimento dos campos obrigatórios e apresenta mensagens de retorno ao usuário. O evento `submit` é utilizado para controlar o envio demonstrativo sem recarregar a página. Os dados preenchidos são organizados em um objeto JavaScript e apresentados no console para fins de demonstração.
 
 O formulário não possui integração com servidor ou serviço externo, portanto, as mensagens não são efetivamente encaminhadas à Câmara Municipal.
+
+**7. Armazenamento de dados com localStorage**
+
+Foi utilizado o `localStorage` para armazenar o nome e o e-mail preenchidos no formulário de contato. Dessa forma, os dados podem ser recuperados quando o usuário retorna à página, mesmo após atualizar ou fechar e abrir novamente o navegador. Os dados permanecem armazenados até serem removidos.
+
+**8. Armazenamento de dados com sessionStorage**
+
+O `sessionStorage` foi utilizado para armazenar o termo digitado no campo de pesquisa de vereadores. Assim, a pesquisa pode ser recuperada durante a sessão da aba do navegador, inclusive após a atualização da página.
+
+**9. Utilização de cookies**
+
+Foram implementados cookies para registrar a preferência do usuário em relação ao uso de cookies no portal. Os botões "Aceitar" e "Recusar" permitem registrar a escolha, que possui validade de 30 dias. A preferência armazenada pode ser recuperada para atualizar a informação apresentada na interface.
+
+**10. Gerenciamento dos dados armazenados**
+
+Foi adicionada uma seção específica para apresentar os recursos de armazenamento utilizados. A interface exibe informações sobre o estado dos dados e disponibiliza o botão "Limpar dados salvos", que remove os dados de contato do `localStorage`, a pesquisa do `sessionStorage` e a preferência registrada no cookie.
 
 ---
 
@@ -187,6 +206,17 @@ Permite voltar rapidamente ao início da página após a rolagem, oferecendo uma
 
 Apresenta a identificação da Câmara Municipal, links rápidos para as seções e informações sobre a localidade.
 
+### 11. Armazenamento de dados no navegador
+
+Apresenta uma seção informativa sobre as três tecnologias de armazenamento utilizadas no projeto: `localStorage`, `sessionStorage` e cookies. Cada cartão explica a finalidade do recurso e apresenta o estado dos dados armazenados.
+
+### 12. Preferências de cookies
+
+Disponibiliza os botões "Aceitar" e "Recusar", permitindo registrar a preferência do usuário. A escolha é armazenada em um cookie com validade de 30 dias e pode ser recuperada durante o carregamento da página.
+
+### 13. Limpeza dos dados armazenados
+
+Permite remover os dados de contato salvos, o termo da pesquisa de vereadores e a preferência registrada no cookie. Após a operação, os textos de status são atualizados para informar o resultado da limpeza.
 ---
 
 ## ♿ Acessibilidade
@@ -239,6 +269,12 @@ O desenvolvimento das funcionalidades dinâmicas permitiu aplicar diferentes con
 | `appendChild()` | Inserir elementos criados na estrutura da página. |
 | `classList` | Adicionar e remover classes CSS para controlar estados visuais. |
 | Estruturas condicionais | Verificar resultados de pesquisa e campos do formulário. |
+| localStorage | Armazenamento persistente dos dados de contato no navegador. |
+| sessionStorage | Armazenamento do termo de pesquisa durante a sessão da aba. |
+| Cookies | Registro e recuperação da preferência do usuário sobre cookies. |
+| encodeURIComponent() | Codificação do valor armazenado no cookie. |
+| document.cookie | Criação, leitura e remoção de cookies por JavaScript. |
+| Eventos de clique | Registro das preferências e limpeza dos dados armazenados. |
 
 Esses conceitos demonstram como o JavaScript pode complementar o HTML e o CSS, permitindo que a interface responda às ações do usuário e atualize seus elementos dinamicamente.
 
@@ -265,6 +301,8 @@ O projeto permitiu desenvolver uma interface institucional utilizando HTML5 e CS
 A implementação de arrays, objetos, funções, eventos e manipulação do DOM tornou a página mais interativa, permitindo a geração dinâmica dos vereadores e das sessões, a pesquisa por nome ou partido, o destaque do menu de navegação, o retorno ao topo e a validação demonstrativa do formulário.
 
 Além dos aspectos funcionais, foram considerados a organização do conteúdo, a acessibilidade e a responsividade, buscando oferecer uma experiência de navegação clara em diferentes dispositivos.
+
+Também foram aplicados mecanismos de armazenamento no navegador, por meio do localStorage, sessionStorage e cookies, permitindo demonstrar a persistência de dados de contato, a manutenção temporária de pesquisas e o registro de preferências do usuário. A seção de armazenamento e o recurso de limpeza complementam as funcionalidades interativas do portal.
 
 Por se tratar de um trabalho acadêmico, o projeto demonstra conceitos fundamentais de desenvolvimento web e pode ser ampliado futuramente com integração a banco de dados, atualização automática das informações legislativas e envio real de mensagens por meio de um servidor.
 
