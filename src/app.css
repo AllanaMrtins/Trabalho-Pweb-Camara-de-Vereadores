@@ -1,0 +1,31 @@
+/* Ajustes específicos da aplicação React */
+
+.route-view {
+  min-height: 60vh;
+}
+
+.nav a {
+  cursor: pointer;
+}
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 0;
+  }
+}

@@ -1,85 +1,141 @@
-Changelog
+# Changelog — Câmara Municipal de Ipiranga do Piauí
 
-Todas as alterações relevantes deste projeto serão documentadas neste arquivo.
+Todas as alterações relevantes do projeto são registradas neste arquivo.
 
-O formato segue uma organização por versões, destacando as funcionalidades adicionadas e as melhorias realizadas durante o desenvolvimento.
+O projeto foi desenvolvido de forma incremental ao longo de três trabalhos acadêmicos. Os dois primeiros trabalhos correspondem à construção e ao aprimoramento da aplicação original com HTML, CSS e JavaScript. O terceiro trabalho corresponde à modernização da aplicação com React, Vite e arquitetura SPA.
 
-[1.2.0] - 2026-10-23
+## [3.0.0] — Trabalho 3 — Parcial 1 — 20/11/2026
 
-Adicionado
+### Contexto
 
-- Implementação de armazenamento de dados no navegador utilizando `localStorage`, `sessionStorage` e cookies HTTP.
-- Utilização do `localStorage` para salvar e recuperar o nome e o e-mail preenchidos no formulário de contato.
-- Utilização do `sessionStorage` para manter o termo de pesquisa de vereadores durante a sessão da aba do navegador.
-- Implementação de cookies para registrar a preferência do usuário em relação ao uso de cookies, com validade de 30 dias.
-- Criação da seção "Armazenamento de dados no navegador", com cartões informativos sobre as três tecnologias utilizadas.
-- Inclusão dos botões "Aceitar" e "Recusar" para registrar a preferência de cookies.
-- Criação do botão "Limpar dados salvos", permitindo remover os dados de contato, a pesquisa armazenada e a preferência registrada no cookie.
-- Exibição de mensagens para informar o estado dos dados armazenados e as ações realizadas pelo usuário.
+Esta versão corresponde à Parcial 1 do terceiro trabalho da disciplina Programação para a Web I. Ela registra a primeira etapa da evolução do projeto; a implementação completa do Trabalho 3 será concluída nas próximas entregas. O objetivo é dar continuidade à aplicação desenvolvida nos dois trabalhos anteriores, mantendo o tema Câmara de Vereadores e adaptando a estrutura existente para a utilização de ferramentas modernas de desenvolvimento frontend.
 
-Modificado
+### Adicionado
 
-- Atualização do HTML para incluir a seção de armazenamento de dados e os elementos necessários à interação com o usuário.
-- Atualização do CSS para estilizar os cartões de armazenamento, os botões de preferência de cookies e as mensagens de retorno.
-- Atualização do arquivo `script.js` para implementar as operações de armazenamento, recuperação e remoção de dados.
-- Ajuste dos eventos dos botões de cookies para registrar e exibir a preferência selecionada pelo usuário.
-- Atualização do menu de navegação para incluir o acesso à seção de armazenamento de dados.
+- Migração da aplicação original para React.
+- Configuração do Vite como ferramenta de desenvolvimento e build.
+- Implementação de uma Single-Page Application (SPA).
+- Implementação de navegação no cliente com React Router.
+- Criação de rotas para as áreas de início, Câmara, vereadores, sessões, projetos e leis, transparência, armazenamento e contato.
+- Organização da interface em componentes React reutilizáveis.
+- Configuração do Bootstrap como biblioteca de estilização e apoio ao layout responsivo.
+- Configuração do ESLint para análise estática do código.
+- Configuração do Prettier para padronização da formatação.
+- Inclusão de instruções atualizadas de instalação, execução e validação no README.
+- Inclusão do arquivo `PLANO-ENTREGAS.md`, com a divisão entre as entregas parciais e a entrega final.
 
-Observações
+### Modificado
 
-- O armazenamento realizado pelo `localStorage` persiste após o fechamento do navegador, até que os dados sejam removidos.
-- O `sessionStorage` mantém os dados durante a sessão da aba do navegador.
-- Os cookies utilizados registram a preferência do usuário por meio de JavaScript e possuem validade de 30 dias.
-- O uso de cookies neste projeto tem finalidade demonstrativa e não envolve o envio de dados para um servidor.
-- O formulário de contato possui funcionamento demonstrativo e não encaminha mensagens para um servidor.
-- As informações dos vereadores e das sessões são armazenadas diretamente no código JavaScript.
+- Substituição da estrutura baseada em uma única página HTML com manipulação direta do DOM por uma aplicação React componentizada.
+- Substituição da navegação por âncoras por rotas gerenciadas no lado do cliente.
+- Reorganização dos dados de vereadores e sessões no arquivo `src/data/conteudo.js`.
+- Atualização da estrutura de diretórios para o padrão de um projeto React com Vite.
+- Atualização do README para documentar as novas ferramentas e os comandos do projeto.
+- Atualização do processo de desenvolvimento para utilizar `npm install`, `npm run dev`, `npm run lint` e `npm run build`.
 
-[1.1.0] - 2026-10-16
+### Funcionalidades mantidas
 
-Adicionado
+- Consulta e filtragem dos vereadores por nome ou partido.
+- Persistência do termo de pesquisa utilizando `sessionStorage`.
+- Persistência do nome e do e-mail do contato utilizando `localStorage`.
+- Limpeza dos dados armazenados no navegador.
+- Apresentação das informações institucionais da Câmara.
+- Exibição da tabela de sessões legislativas.
+- Áreas de projetos, leis, documentos e transparência.
+- Formulário de contato com validação dos campos obrigatórios.
+- Layout responsivo e recursos básicos de acessibilidade.
 
-- Implementação de JavaScript para adicionar dinamicidade e interatividade à página.
-- Criação dinâmica dos cartões de vereadores utilizando arrays, objetos e manipulação do DOM.
-- Campo de pesquisa de vereadores por nome ou partido.
-- Geração dinâmica das linhas da tabela de sessões legislativas.
-- Destaque visual no menu de navegação conforme a seção acessada.
-- Botão para retornar ao topo da página durante a rolagem.
-- Validação dos campos obrigatórios do formulário de contato.
-- Mensagens de retorno para informar o resultado da validação do formulário.
+### Validação
 
-Modificado
+- O comando `npm run lint` foi executado sem erros.
+- O comando `npm run build` foi executado com sucesso.
+- A aplicação pode ser executada localmente com `npm run dev`.
 
-- Atualização do HTML para integrar os elementos necessários às funcionalidades JavaScript.
-- Atualização do CSS para estilizar o campo de pesquisa, o menu ativo, as mensagens do formulário e o botão de retorno ao topo.
-- Inclusão do arquivo `script.js` na estrutura do projeto.
-- Atualização da documentação do projeto para incluir as novas funcionalidades e tecnologias utilizadas.
+### Próximas alterações previstas para a Parcial 2
 
-Observações
-
-- O formulário de contato possui funcionamento demonstrativo e não encaminha mensagens para um servidor.
-- As informações dos vereadores e das sessões são armazenadas diretamente no código JavaScript.
-
-[1.0.0] - Versão inicial
-
-Adicionado
-
-- Criação da estrutura inicial do portal institucional com HTML5.
-- Estilização da página utilizando CSS3.
-- Cabeçalho com identificação da Câmara Municipal e menu de navegação.
-- Seção inicial com apresentação do portal e acessos rápidos.
-- Seção institucional com cartões informativos.
-- Seção de vereadores com nomes, partidos e iniciais.
-- Tabela com informações sobre as sessões legislativas.
-- Área de projetos, leis e documentos.
-- Seção de transparência com links de acesso.
-- Formulário de contato.
-- Rodapé com identificação institucional e links rápidos.
-- Recursos básicos de acessibilidade.
-- Layout responsivo para tablets e celulares.
-- Documentação inicial do projeto no arquivo `README.md`.
+- Implementação de comunicação assíncrona com a Fetch API utilizando requisições GET.
+- Criação de arquivos JSON na pasta `public/data` para servir os dados da aplicação.
+- Inclusão de estados de carregamento e mensagens de erro nas requisições.
+- Finalização do gerenciamento da preferência de cookies.
+- Atualização completa do relatório no modelo da Sociedade Brasileira de Computação (SBC).
+- Registro das versões das ferramentas, dificuldades encontradas e soluções adotadas.
 
 ---
 
-Projeto acadêmico: Câmara Municipal de Ipiranga do Piauí  
-Disciplina: Programação para a Web 1  
-Ano: 2026
+## [2.0.0] — Trabalho 2 — 23/10/2026
+
+### Contexto
+
+Esta versão corresponde ao segundo trabalho da disciplina. A aplicação institucional criada no Trabalho 1 foi aprimorada com JavaScript, recursos de interatividade e armazenamento de dados no navegador.
+
+### Adicionado
+
+- Implementação de interatividade com JavaScript.
+- Geração dinâmica dos cartões de vereadores a partir de arrays e objetos.
+- Pesquisa de vereadores por nome ou partido.
+- Geração dinâmica da tabela de sessões legislativas.
+- Validação do formulário de contato.
+- Mensagens de sucesso e erro para o formulário.
+- Utilização de `localStorage` para salvar o nome e o e-mail do contato.
+- Utilização de `sessionStorage` para salvar a pesquisa de vereadores durante a sessão da aba.
+- Utilização de cookies para registrar a preferência do usuário.
+- Seção de armazenamento de dados no navegador.
+- Botões para aceitar ou recusar cookies.
+- Botão para limpar os dados armazenados.
+- Exibição do estado dos dados salvos no navegador.
+- Destaque da seção ativa no menu de navegação.
+- Botão para retornar ao topo da página.
+
+### Modificado
+
+- Atualização do HTML para incluir os elementos necessários às funcionalidades JavaScript.
+- Atualização do CSS para estilizar a pesquisa, o menu ativo, as mensagens, os cartões de armazenamento e os controles de cookies.
+- Criação e inclusão do arquivo `script.js`.
+- Atualização da documentação para descrever as novas funcionalidades.
+
+### Observações
+
+- O formulário de contato possui finalidade demonstrativa e não encaminha mensagens para um servidor real.
+- Os dados de vereadores e sessões permanecem armazenados diretamente no código JavaScript.
+- O `localStorage` persiste os dados até que sejam removidos pelo usuário.
+- O `sessionStorage` mantém os dados enquanto a sessão da aba estiver ativa.
+- Os cookies utilizados têm finalidade acadêmica e demonstrativa.
+
+---
+
+## [1.0.0] — Trabalho 1 — Versão inicial
+
+### Adicionado
+
+- Criação da estrutura inicial do portal institucional da Câmara Municipal de Ipiranga do Piauí.
+- Estruturação da página utilizando HTML5.
+- Estilização da interface utilizando CSS3.
+- Criação do cabeçalho com identificação da Câmara e menu de navegação.
+- Criação da seção inicial com apresentação do portal.
+- Criação dos acessos rápidos para as áreas principais do sistema.
+- Criação da seção institucional.
+- Criação da seção de vereadores.
+- Criação da tabela de sessões legislativas.
+- Criação da área de projetos, leis e documentos.
+- Criação da seção de transparência.
+- Criação do formulário de contato.
+- Criação do rodapé institucional.
+- Inclusão de layout responsivo para diferentes tamanhos de tela.
+- Inclusão de recursos básicos de acessibilidade.
+- Criação da documentação inicial do projeto.
+
+### Observações
+
+- Esta versão apresentava a estrutura visual e institucional inicial da aplicação.
+- As funcionalidades dinâmicas e o armazenamento no navegador foram desenvolvidos nos trabalhos seguintes.
+
+---
+
+## Identificação do projeto
+
+- **Projeto:** Câmara Municipal de Ipiranga do Piauí
+- **Disciplina:** Programação para a Web I
+- **Trabalho atual:** Trabalho 3 — Parcial 1
+- **Versão do trabalho:** 3.0.0
+- **Estado da versão:** Parcial 1 de 2
+- **Ano letivo:** 2026
