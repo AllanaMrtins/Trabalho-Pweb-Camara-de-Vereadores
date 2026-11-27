@@ -1,31 +1,17 @@
-/* Ajustes específicos da aplicação React */
-
-.route-view {
-  min-height: 60vh;
+/* Estados da comunicação assíncrona */
+.mensagem-erro {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  max-width: 680px;
+  padding: 16px;
+  border: 1px solid #f0b5b0;
+  border-radius: 10px;
+  background: #fff1f0;
+  color: #9f231c;
 }
 
-.nav a {
-  cursor: pointer;
-}
-
-.link-button {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--blue);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-@media (max-width: 760px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .topo {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 18px;
-    padding: 18px 0;
-  }
+[role='status'] {
+  color: var(--muted);
+  font-weight: 600;
 }

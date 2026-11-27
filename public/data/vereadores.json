@@ -1,0 +1,11 @@
+[
+  { "nome": "Antonio Ribeiro", "partido": "PT", "iniciais": "AR" },
+  { "nome": "Edivaldo Fontes", "partido": "PT", "iniciais": "EF" },
+  { "nome": "Francisco Márcio", "partido": "MDB", "iniciais": "FM" },
+  { "nome": "Henrique Leal", "partido": "PT", "iniciais": "HL" },
+  { "nome": "Jofran Lopes", "partido": "PT", "iniciais": "JL" },
+  { "nome": "Paulo Cortez", "partido": "MDB", "iniciais": "PC" },
+  { "nome": "Peterson Barbosa", "partido": "PSD", "iniciais": "PB" },
+  { "nome": "João Olimpio", "partido": "MDB", "iniciais": "JO" },
+  { "nome": "Tiago Leal", "partido": "PSD", "iniciais": "TL" }
+]
