@@ -4,7 +4,7 @@ Todas as alterações relevantes do projeto são registradas neste arquivo.
 
 O projeto foi desenvolvido de forma incremental ao longo de três trabalhos acadêmicos. Os dois primeiros trabalhos correspondem à construção e ao aprimoramento da aplicação original com HTML, CSS e JavaScript. O terceiro trabalho corresponde à modernização da aplicação com React, Vite e arquitetura SPA.
 
-## [3.0.0] — Trabalho 3 — Parcial 2 — 27/11/2026
+## [3.0.1] — Trabalho 3 — Parcial 2 — 27/11/2026
 
 ### Contexto
 
@@ -12,9 +12,9 @@ Esta versão registra a segunda etapa do Trabalho 3. A estrutura SPA criada na P
 
 ### Adicionado
 
-- Arquivo `public/data/vereadores.json` com os dados dos vereadores.
-- Arquivo `public/data/sessoes.json` com a agenda de sessões.
-- Serviço `src/services/api.js` para centralizar requisições HTTP GET com a Fetch API.
+- Arquivo public/data/vereadores.json com os dados dos vereadores.
+- Arquivo public/data/sessoes.json com a agenda de sessões.
+- Serviço src/services/api.js para centralizar requisições HTTP GET com a Fetch API.
 - Carregamento assíncrono dos vereadores e das sessões.
 - Estado visual de carregamento.
 - Tratamento de respostas HTTP com erro.
